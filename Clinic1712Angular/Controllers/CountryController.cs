@@ -1,5 +1,6 @@
 ﻿using Clinic1712Angular.Models;
 using Clinic1712Angular.services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace Clinic1712Angular.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles ="Sales")]
     public class CountryController : ControllerBase
     {
         ICountryService countryService;

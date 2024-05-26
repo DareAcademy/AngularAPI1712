@@ -122,5 +122,17 @@ namespace Clinic1712Angular.services
         {
             await signInManager.SignOutAsync();
         }
+
+        public async Task<IList<string>> GetUserRoles(ApplicationUser user)
+        {
+            var Roles = await userManager.GetRolesAsync(user);
+            return Roles;
+        }
+
+        public async Task<ApplicationUser> GetUserInfo(string username)
+        {
+            var result = await userManager.FindByNameAsync(username);
+            return result;
+        }
     }
 }

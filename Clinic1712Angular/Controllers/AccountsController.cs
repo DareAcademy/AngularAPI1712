@@ -1,5 +1,6 @@
 ﻿using Clinic1712Angular.Models;
 using Clinic1712Angular.services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
@@ -19,19 +20,27 @@ namespace Clinic1712Angular.Controllers
         {
             accountService = _accountService;
         }
-        
+
         [HttpPost]
         [Route("SignUp")]
+        [Authorize(Roles = "Admin")]
 
         public async Task SignUp(SignUpDTO signUp)
         {
+            try
+            {
 
-            await accountService.CreateAccount(signUp);
+                await accountService.CreateAccount(signUp);
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         [HttpPost]
         [Route("AddRole")]
-
+        [Authorize(Roles = "Admin")]
         public async Task AddRole(RoleDTO dto)
         {
             var result = await accountService.CreateRole(dto);
@@ -39,6 +48,7 @@ namespace Clinic1712Angular.Controllers
 
         [HttpGet]
         [Route("UserList")]
+        [Authorize(Roles = "Admin")]
         public async Task<List<UserDTO>> UserList()
         {
             List<UserDTO> users = await accountService.GetUsers();
@@ -79,6 +89,16 @@ namespace Clinic1712Angular.Controllers
                 claim = new Claim("UniqueValue", Guid.NewGuid().ToString());
                 authClaim.Add(claim);
 
+                var user=await accountService.GetUserInfo(signInDTO.Username);
+                var userRoles= await accountService.GetUserRoles(user);
+
+                foreach (var item in userRoles)
+                {
+                    Claim obj= new Claim(ClaimTypes.Role, item);
+                    authClaim.Add(obj);
+                }
+
+
                 var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ThisMySecurityKey"));
 
                 var token = new JwtSecurityToken(
@@ -99,6 +119,16 @@ namespace Clinic1712Angular.Controllers
             {
                 return Unauthorized();
             }
+
+        }
+
+        [HttpGet]
+        [Route("GetUserRoles")]
+        public async Task<IList<string>> GetUserRoles(string username)
+        {
+            var user= await accountService.GetUserInfo(username);
+            IList<string> roles=await accountService.GetUserRoles(user);
+            return roles;
 
         }
     }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Clinic1712Angular.Models;
+using Clinic1712Angular.data;
 
 namespace Clinic1712Angular.services
 {
@@ -18,5 +19,9 @@ namespace Clinic1712Angular.services
         Task UpdateUserRoles(List<UserRolesDTO> userRoles);
 
         Task Logout();
+
+        Task<ApplicationUser> GetUserInfo(string username);
+
+        Task<IList<string>> GetUserRoles(ApplicationUser user);
     }
 }
