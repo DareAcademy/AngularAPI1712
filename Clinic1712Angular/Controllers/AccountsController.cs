@@ -31,6 +31,9 @@ namespace Clinic1712Angular.Controllers
             {
 
                 await accountService.CreateAccount(signUp);
+
+                // test
+
             }
             catch (Exception ex)
             {

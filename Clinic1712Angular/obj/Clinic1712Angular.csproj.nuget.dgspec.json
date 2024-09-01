@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\inetpub\\wwwroot\\Clinic1712Angular\\Clinic1712Angular\\Clinic1712Angular.csproj": {}
+    "C:\\Users\\Admin\\Source\\Repos\\DareAcademy\\AngularAPI1712\\Clinic1712Angular\\Clinic1712Angular.csproj": {}
   },
   "projects": {
-    "C:\\inetpub\\wwwroot\\Clinic1712Angular\\Clinic1712Angular\\Clinic1712Angular.csproj": {
+    "C:\\Users\\Admin\\Source\\Repos\\DareAcademy\\AngularAPI1712\\Clinic1712Angular\\Clinic1712Angular.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\inetpub\\wwwroot\\Clinic1712Angular\\Clinic1712Angular\\Clinic1712Angular.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\Repos\\DareAcademy\\AngularAPI1712\\Clinic1712Angular\\Clinic1712Angular.csproj",
         "projectName": "Clinic1712Angular",
-        "projectPath": "C:\\inetpub\\wwwroot\\Clinic1712Angular\\Clinic1712Angular\\Clinic1712Angular.csproj",
+        "projectPath": "C:\\Users\\Admin\\Source\\Repos\\DareAcademy\\AngularAPI1712\\Clinic1712Angular\\Clinic1712Angular.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\inetpub\\wwwroot\\Clinic1712Angular\\Clinic1712Angular\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\Repos\\DareAcademy\\AngularAPI1712\\Clinic1712Angular\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

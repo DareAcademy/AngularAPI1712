@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5vdzx+VTn6c4swthKN3XDWpRp0abdMuLkbfXKlnfGf1te+Na361fDmWF00q2Vzs8+mb2nJ8L7r3ff3nmiZjdtg==",
+  "dgSpecHash": "OxljQI3Ffu+yLoVPKVQDmt0WsTqBsCPG/T2FStItxcCVQYCMbb+yA/iWVrSKijx28euAsgWulgWXrQnzMSa/sg==",
   "success": true,
-  "projectFilePath": "C:\\inetpub\\wwwroot\\Clinic1712Angular\\Clinic1712Angular\\Clinic1712Angular.csproj",
+  "projectFilePath": "C:\\Users\\Admin\\Source\\Repos\\DareAcademy\\AngularAPI1712\\Clinic1712Angular\\Clinic1712Angular.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
